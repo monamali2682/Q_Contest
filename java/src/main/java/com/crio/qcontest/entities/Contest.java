@@ -31,6 +31,11 @@ public class Contest {
     // 2) Throw a Runtime Exception with an appropriate message if above condition is not true.
 
     private void validateQuestions(List<Question> questions, Level level) {
+        for(Question q:questions){
+            if(q.getLevel()!=this.getLevel()){
+                throw new RuntimeException("Question level should be same as that of contest level");
+            }                   
+        }
     }
 
     public String getTitle() {
@@ -64,10 +69,11 @@ public class Contest {
     // 1) Mark the status of contest as ended.
 
     public void endContest(){
+        contestStatus=ContestStatus.ENDED;
     }
 
     @Override
     public String toString() {
-        return "Contest [id=" + id + "]";
+        return "Contest [id=" + id + " Title=" + title+ "]";
     }
 }
