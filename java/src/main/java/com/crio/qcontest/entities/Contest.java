@@ -24,11 +24,6 @@ public class Contest {
         this(title, level, createdBy, questions,null);
     }
 
-    // TODO: CRIO_TASK_MODULE_ENTITIES
-    // Complete the implementation of validateQuestions method
-    // Implementation must take care of the following cases:-
-    // 1) Verify if the level of all the questions and contest matches.
-    // 2) Throw a Runtime Exception with an appropriate message if above condition is not true.
 
     private void validateQuestions(List<Question> questions, Level level) {
         for(Question q:questions){
@@ -63,17 +58,13 @@ public class Contest {
     }
 
 
-    // TODO: CRIO_TASK_MODULE_ENTITIES
-    // Complete the implementation of endContest method
-    // Implementation must take care of the following cases:-
-    // 1) Mark the status of contest as ended.
 
     public void endContest(){
-        contestStatus=ContestStatus.ENDED;
+        contestStatus= ContestStatus.ENDED;
     }
 
     @Override
     public String toString() {
-        return "Contest [id=" + id + " Title=" + title+ "]";
+        return "Contest [id=" + id + "]";
     }
 }

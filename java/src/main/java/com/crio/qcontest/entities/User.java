@@ -27,15 +27,10 @@ public class User {
     public Long getId() {
         return id;
     }
-    // TODO: CRIO_TASK_MODULE_ENTITIES
-    // Complete the implementation of modifyScore method
-    // Implementation must take care of the following cases:-
-    // 1) Set an appropriate totalScore.
-    // 2) Throw a Runtime Exception with an appropriate message for invalid score.
 
     public void modifyScore(Integer score){
         if(score<0){
-                throw new RuntimeException("score can not be negative");
+            throw new RuntimeException("score can not be negative");
         }
         totalScore=score;
     }
